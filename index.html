@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VSIAF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🔘 BOTONES -->
+    <div style="text-align:center; margin:10px;">
+        <button onclick="mostrarLogin()">Ingresar Identidad</button>
+        <button onclick="mostrarOficina()">Ir a Oficina</button>
+    </div>
+
+    <!-- 🔵 OFICINA -->
+    <div id="oficina" style="display:none;">
+
+        <div class="container">
+
+            <div class="header">
+                <span>UNIDAD: 0252</span>
+                <h2>OFICINA</h2>
+            </div>
+
+            <div class="form-section">
+                <label>Oficina</label>
+                <input type="text" value="1 100 DIRECCION III ASA">
+                <select>
+                    <option>ACTIVO</option>
+                </select>
+
+                <div class="buttons-side">
+                    <button>Nuevo</button>
+                    <button>Modificar</button>
+                    <button>Activar</button>
+                    <button>Inactivar</button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>Observación</label>
+                <textarea></textarea>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cod.</th>
+                        <th>Responsable</th>
+                        <th>Cargo</th>
+                        <th>CI</th>
+                        <th>Expedido</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>DRA. GLADYS QUIROGA</td>
+                        <td>DIRECTORA</td>
+                        <td></td>
+                        <td></td>
+                        <td>ACTIVO</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>DR. WALTER AGREDA COCA</td>
+                        <td>DIRECTOR GENERAL EJECUTIVO</td>
+                        <td></td>
+                        <td></td>
+                        <td>ACTIVO</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="6">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="footer-buttons">
+                <button>Activar</button>
+                <button>Inactivar</button>
+                <button>Nuevo</button>
+                <button>Modificar</button>
+                <button class="guardar">Guardar</button>
+                <button>Deshacer</button>
+                <button class="salir">Salir</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 🔵 LOGIN -->
+    <div id="login">
+
+        <div class="box">
+            <div class="top">INGRESE SU IDENTIFICACION</div>
+
+            <div class="header">
+                <h2>V.S.I.A.F</h2>
+                <p>Sistema de Activos Fijos</p>
+            </div>
+
+            <div class="login">
+                Usuario:<br>
+                <input type="text" value="admin"><br>
+                Contraseña:<br>
+                <input type="password">
+                <br>
+                <button>Aceptar</button>
+                <p><b>NOTA:</b> Es sensible al contexto</p>
+            </div>
+
+            <div class="footer">
+                VSIAF versión 2.0<br>
+                © 1999-2012
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🔧 SCRIPT -->
+    <script>
+        function mostrarLogin() {
+            document.getElementById("login").style.display = "block";
+            document.getElementById("oficina").style.display = "none";
+        }
+
+        function mostrarOficina() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("oficina").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
